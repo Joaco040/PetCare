@@ -1,0 +1,214 @@
+/* Variables para colores, tipografía e íconos */
+:root {
+    --primary-color: #9acccd;  /* Verde menta: color principal utilizado en el diseño */
+    --secondary-color: #2e6664; /* Naranja durazno: color secundario */
+    --bg-color: #f9fafb;  /* Blanco cálido: color de fondo de la página */
+    --text-color: #000000; /* Color del texto: negro */
+    --card-bg-color: #f0f0f0; /* Blanco para las tarjetas: fondo de las tarjetas */
+    --button-hover: #2ec4b6;  /* Naranja más suave al hacer hover: color de fondo del botón en hover */
+    --font-family: "Fredoka", sans-serif;  /* Tipografía principal utilizada en el sitio */
+}
+
+/* Estilos generales aplicados a todos los elementos */
+* {
+    margin: 0; /* Elimina los márgenes predeterminados del navegador */
+    padding: 0; /* Elimina el relleno predeterminado del navegador */
+    box-sizing: border-box; /* Incluye el padding y borde en el tamaño total del elemento */
+}
+
+/* Estilos del cuerpo (body) del documento */
+body {
+    font-family: var(--font-family); /* Aplica la tipografía definida en :root */
+    background-color: var(--bg-color); /* Color de fondo del body */
+    color: var(--text-color); /* Color del texto en el body */
+    line-height: 1.6; /* Espaciado entre líneas para mejorar la legibilidad */
+}
+
+/* Estilo para listas no ordenadas (sin viñetas) */
+ul {
+    list-style-type: none; /* Elimina las viñetas de las listas */
+}
+
+/* Estilos del encabezado (header) */
+.header {
+    display: flex; /* Utiliza flexbox para alinear y distribuir los elementos */
+    justify-content: space-between; /* Espacia los elementos a los extremos */
+    align-items: center; /* Alinea verticalmente los elementos dentro del header */
+    padding: 1rem; /* Añade espacio interno alrededor del header */
+    background-color: var(--primary-color); /* Color de fondo del header */
+}
+
+/* Estilo del logo */
+.logo {
+    font-size: clamp(1.5rem, 2vw, 2rem); /* Tamaño del logo ajustable según el tamaño de la pantalla */
+    color: rgb(0, 0, 0); /* Color del texto del logo: negro */
+}
+
+/* Navegación (menú) dentro del header */
+.nav ul {
+    display: flex; /* Utiliza flexbox para alinear horizontalmente los enlaces del menú */
+    gap: 1.5rem; /* Espacio entre los elementos del menú */
+}
+
+/* Estilos de los enlaces del menú */
+.nav a {
+    color: rgb(0, 0, 0); /* Color de los enlaces: negro */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-size: 1rem; /* Tamaño de fuente para los enlaces del menú */
+}
+
+nav a:hover{
+    color: white;
+    transition: 1.5s;
+}
+
+/* Sección del héroe (parte principal con imagen y texto) */
+.hero {
+    display: grid; /* Utiliza grid layout para organizar la imagen y el texto */
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales: una para el texto y otra para la imagen */
+    padding: 2rem; /* Espacio interno en la sección */
+    background-color: #78b2b1; /* Color de fondo de la sección héroe */
+}
+
+/* Estilo de la imagen dentro de la sección héroe */
+.hero-image img {
+    width: 80%; /* La imagen ocupará el 80% del ancho del contenedor */
+    padding: 2rem; /* Espacio alrededor de la imagen */
+    height: auto; /* La altura de la imagen se ajusta automáticamente */
+    object-fit: cover; /* La imagen se ajusta al contenedor sin deformarse */
+}
+
+/* Contenedor de texto dentro de la sección héroe */
+.hero-text {
+    display: flex; /* Utiliza flexbox para alinear el texto */
+    flex-direction: column; /* Coloca el texto en una columna */
+    justify-content: center; /* Centra verticalmente el contenido dentro del contenedor */
+}
+
+/* Estilo del título principal en la sección héroe */
+.hero h1 {
+    font-size: clamp(2rem, 4vw, 3rem); /* Tamaño del texto que se ajusta según el tamaño de la pantalla */
+    color: var(--text-color); /* Aplica el color principal al título */
+}
+
+/* Estilo del párrafo en la sección héroe */
+.hero p {
+    margin: 1rem 0; /* Espacio alrededor del párrafo */
+    font-size: 1.25rem; /* Tamaño de fuente para el párrafo */
+}
+
+/* Estilos del botón */
+.btn {
+    background-color: var(--secondary-color); /* Color de fondo del botón */
+    color: rgb(255, 255, 255); /* Color del texto del botón: negro */
+    padding: 0.75rem 1.5rem; /* Espacio interno del botón */
+    border: none; /* Elimina el borde predeterminado */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-family: var(--font-family); /* Aplica la tipografía principal */
+    font-size: 1rem; /* Tamaño del texto del botón */
+}
+
+/* Estilos para el efecto hover en el botón */
+.btn:hover {
+    background-color: var(--button-hover); /* Color de fondo del botón al hacer hover */
+    transition: .5s;
+    color: black;
+}
+
+/* Sección de servicios (tres columnas con artículos) */
+.services {
+    display: grid; /* Utiliza grid layout para organizar los artículos en columnas */
+    grid-template-columns: repeat(3, 1fr); /* Crea tres columnas iguales para los artículos */
+    gap: 2rem; /* Espacio entre las columnas */
+    padding: 2rem; /* Espacio interno en la sección */
+    background-color: #4f8b8a; /* Color de fondo de la sección de servicios */
+}
+
+/* Estilo para cada artículo dentro de la sección de servicios */
+.services article {
+    background-color: #d9a156; /* Color de fondo para los artículos */
+    padding: 1.5rem; /* Espacio interno dentro de cada artículo */
+    text-align: center; /* Centra el texto dentro de cada artículo */
+    border-radius: 8px; /* Bordes redondeados para un efecto más suave */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad a los artículos */
+}
+
+/* Estilos para los íconos dentro de los artículos */
+.services .icon {
+    font-size: 3rem; /* Tamaño de los íconos dentro de los artículos */
+    color: var(--text-color); /* Color principal para los íconos: negro */
+}
+
+/* Estilo del título dentro de cada artículo */
+.services h2 {
+    margin: 1rem 0; /* Espacio alrededor del título */
+    font-size: 1.5rem; /* Tamaño del título */
+}
+
+/* Estilo del párrafo dentro de cada artículo */
+.services p {
+    margin-bottom: 1rem; /* Espacio inferior del párrafo dentro de los artículos */
+}
+
+/* Estilos del pie de página (footer) */
+.footer {
+    background-color:#9acccd; /* Color de fondo del pie de página */
+    color: rgb(0, 0, 0); /* Color del texto del pie de página: negro */
+    text-align: center; /* Centra el contenido del pie de página */
+    padding: 1rem 0; /* Espaciado interno vertical del pie de página */
+}
+
+/* Estilos de la sección de redes sociales dentro del pie de página */
+.footer .social {
+    display: flex; /* Utiliza flexbox para alinear los íconos sociales */
+    justify-content: center; /* Centra los íconos en el pie de página */
+    gap: 1rem; /* Espacio entre los íconos sociales */
+    margin-bottom: 1rem; /* Espacio inferior en la sección social */
+}
+
+/* Estilo de los íconos sociales */
+.footer .icon {
+    font-size: 2rem; /* Tamaño de los íconos sociales */
+}
+
+/* Estilo general para los íconos */
+.icon {
+    display: inline-block; /* Permite que los íconos se alineen en línea */
+    width: 1em; /* Ancho de cada ícono */
+    height: 1em; /* Altura de cada ícono */
+    stroke-width: 0; /* Ancho del trazo: no se aplica */
+    stroke: currentColor; /* El trazo toma el color actual del texto */
+    fill: currentColor; /* El relleno toma el color actual del texto */
+}
+
+/* Carga de la fuente para los íconos */
+@font-face {
+    font-family: var(--icon-font); /* Nombre de la fuente para íconos */
+    src: url('icons.woff2') format('woff2'); /* Ruta al archivo de la fuente en formato woff2 */
+    font-weight: normal; /* Peso de la fuente: normal */
+    font-style: normal; /* Estilo de la fuente: normal */
+}
+
+/* Estilos para pantallas pequeñas (tablet o móviles) */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+        text-align: center; /* Centra el texto en pantallas pequeñas */
+    }
+    .hero-image img {
+        width: 100%; /* Mantiene la imagen con ancho completo en pantallas pequeñas */
+        height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    }
+
+    .services {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas pequeñas */
+    }
+
+    .fredoka {
+        font-family: "Fredoka", sans-serif; /* Aplica la tipografía Fredoka */
+        font-optical-sizing: auto; /* Ajusta el tamaño óptico de la fuente automáticamente */
+        font-weight: auto; /* Peso de la fuente automático */
+        font-style: normal; /* Estilo de la fuente: normal */
+        font-variation-settings: "wdth" 100; /* Configura el ancho de la fuente */
+    }
+}
